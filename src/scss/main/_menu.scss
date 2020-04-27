@@ -91,9 +91,12 @@
 	}
 
 	&__items {
-		// padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     list-style: none;
     border-right: 1px solid gray;
+
     &:last-child {
       border-right: none;
     }
@@ -101,6 +104,7 @@
       padding: 1rem 2rem;
       font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
       font-weight: 400;
+      text-align: center;
 		}
 
 		.contact-a {
@@ -117,6 +121,20 @@
 
 .checkbox {
 	display: none;
+}
+
+@media only screen and (max-width: 1400px) {
+  .nav-centr {
+    width: 100%;
+  }
+  .navigation {
+    &__items {
+      &__a {
+        padding: 10px 1vw;
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 800px) {

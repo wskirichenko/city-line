@@ -81,19 +81,11 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
-  .only-mobile {
-    display: initial !important;
-  }
-
-  .only-desktop {
-    display: none;
-  }
-
+@media only screen and (max-width: 1400px) {
   .sect-first {
-    height: 90rem;
+    width: 100%;
     &__main {
-      flex-direction: column;
+      width: 100%;
 
     }
   }
