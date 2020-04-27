@@ -1,0 +1,11 @@
+@function calcHeightSize($height_box) {
+  $k: $height_box - $height_box / 6;
+  @return $k;
+}
+
+@function calcCenterTopScrinSize($height_scrin, $height_box) {
+	$k: $height_scrin / 2;
+	$b: $height_box / 2;
+	
+  @return calc( #{$k} - #{$b} );
+}

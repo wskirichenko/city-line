@@ -1,0 +1,455 @@
+.sect-contact {
+	width: 100%;
+	height: 100%;
+	color: #2c2c2c;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	background-color: transparent;
+	font-family: "SF Rounded", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	padding: 2rem 0;
+
+	&__back {
+		position: absolute;
+		top: 5.5rem;
+		width: 100%;
+		height: 35rem;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		background-color: rgb(9, 136, 148);
+		background-image: url(../../../img/SI/back_goodHands.png);
+		z-index: 4;
+	}
+
+	&__main {
+		width: 70rem;
+		// height: 150rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		padding-top: 12rem;
+		z-index: 5;
+
+		&__content {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			box-shadow: 0px 0px 40px #0034831a;
+		}
+
+		&__hed {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			padding-bottom: 2rem;
+
+			h1 {
+				width: 100%;
+				font-size: 35px;
+				text-align: center;
+				color: white;
+			}
+
+			p {
+				font-size: 18px;
+				color: white;
+				text-align: center;
+				line-height: 28px;
+
+			}
+		}
+
+		&__form {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-around;
+			background-color: white;
+			// margin-top: -5rem;
+			padding-top: 5rem;
+
+			#form {
+				width: 88%;
+			}
+
+			&__input-row {
+				width: 100%;
+				height: 11rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-between;
+
+				.input-block {
+					width: 100%;
+					height: 5rem;
+
+					&__heder {
+						font-size: 1.4rem;
+						font-weight: 600;
+						padding-bottom: 1rem;
+						color: #232A45;
+					}
+
+					&__input {
+						width: 100%;
+						height: 100%;
+						border: 1px solid rgb(86, 87, 91);
+						border-radius: 0.5rem;
+						background-color: white;
+						outline: none;
+						font-size: 1.6rem;
+						padding-left: 2rem;
+						z-index: 10;
+					}
+
+					&__label {
+						position: absolute;
+						font-size: 2rem;
+						background-color: white;
+						color: #868AA0;
+						transition: all 0.15s linear;
+						padding: 0 0.5rem;
+						margin-left: 1.5rem;
+						margin-top: 2rem;
+						z-index: 9;
+
+						&__focus {
+							margin-top: -1rem;
+							font-size: 1.4rem;
+							color: #007eff;
+						}
+					}
+				}
+			}
+		}
+
+		&__line {
+			width: 88%;
+			height: 2px;
+			background-color: #868AA0;
+			margin: 4rem 0 7rem;
+		}
+
+		&__row {
+			width: 88%;
+			// height: 44rem;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+
+			&__pict-grup {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				align-items: flex-start;
+				justify-content: space-between;
+				padding-bottom: 3rem;
+
+				.pict-grup__card {
+					width: 31%;
+					height: 20rem;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: flex-start;
+					border-radius: 1rem;
+					border: 1px solid #868AA0;
+					// background-color: white;
+					padding: 1rem 2rem;
+					transition: all 0.5s ease;
+
+					&:hover {
+						cursor: pointer;
+						border: 1px solid #40A5D9;
+					}
+
+					p {
+						font-size: 1.4rem;
+						font-weight: 600;
+						margin: 0;
+						padding-top: 1rem;
+					}
+
+					&__row {
+						width: 100%;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						justify-content: space-between;
+
+						// &__img {
+						// 	width: 6rem;
+						// 	height: 6rem;
+						// 	background-repeat: no-repeat;
+						// 	background-position: center;
+						// 	background-size: contain;
+						// }
+
+						.img--1 {
+							background-image: url(../../../img/ready_teams/modal/img-3.png);
+						}
+						.img--2 {
+							background-image: url(../../../img/ready_teams/modal/img-2.png);
+						}
+						.img--3 {
+							background-image: url(../../../img/ready_teams/modal/img-1.png);
+						}
+
+						.card-head {
+							width: 100%;
+							font-size: 1.6rem;
+							padding-bottom: 1rem;
+							border-bottom: 2px solid #40A5D9;
+							text-align: left;
+						}
+					}
+				}
+			}
+
+			&__btn-sme {
+				width: 100%;
+				margin-top: 2rem;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				padding-bottom: 3rem;
+
+
+				label {
+					width: 31%;
+				}
+				.btn-s {
+					width: 100%;
+					height: 9rem;
+					border: 1px solid #868AA0;
+					border-radius: 5px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: flex-end;
+					text-decoration: none;
+					outline: none;
+					overflow: hidden;
+
+					h3 {
+						text-align: center;
+						font-size: 4.8rem;
+						font-weight: 600;
+						color: #40A5D9;
+					}
+
+					p {
+						text-align: center;
+						font-size: 1.4rem;
+						color: black;
+						border: none;
+						margin-top: 0;
+					}
+				}
+
+				.btn-s:hover {
+					cursor: pointer;
+					border: 1px solid #40A5D9;
+					transition: 0.5s all;
+				}
+				// .btn-s:active {
+				// 	color: #fff;
+				// 	border: 1px solid black;
+				// 	box-shadow: 0 0.5rem 0.5rem rgb(174, 174, 174);
+				// }
+			}
+		}
+
+		&__bottom {
+			width: 88%;
+			height: 20rem;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: space-around;
+			font-size: 1.8rem;
+
+			&__btn {
+				padding: 1.5rem 9rem;
+				border-radius: 0.5rem;
+				background-color: #40A5D9;
+				color: white;
+				text-transform: uppercase;
+				font-size: 1.8rem;
+			}
+
+			input[type="checkbox"]:checked,
+			input[type="checkbox"]:not(:checked) {
+					position: absolute;
+					left: -9999px;
+			}
+
+			input[type="checkbox"]:checked + label,
+			input[type="checkbox"]:not(:checked) + label {
+					display: inline-block;
+					position: relative;
+					padding-left: 28px;
+					line-height: 20px;
+					cursor: pointer;
+			}
+
+			input[type="checkbox"]:checked + label:before,
+			input[type="checkbox"]:not(:checked) + label:before {
+					content: "";
+					position: absolute;
+					left: 0px;
+					top: 0px;
+					width: 18px;
+					height: 18px;
+					border: 1px solid #40A5D9;
+					background-color: #ffffff;
+			}
+
+			input[type="checkbox"]:checked + label:before,
+			input[type="checkbox"]:not(:checked) + label:before {
+					border-radius: 2px;
+			}
+
+			input[type="checkbox"]:checked + label:after,
+			input[type="checkbox"]:not(:checked) + label:after {
+					content: "";
+					position: absolute;
+					-webkit-transition: all 0.2s ease;
+					-moz-transition: all 0.2s ease;
+					-o-transition: all 0.2s ease;
+					transition: all 0.2s ease;
+			}
+
+			input[type="checkbox"]:checked + label:after,
+			input[type="checkbox"]:not(:checked) + label:after {
+					left: 3px;
+					top: 4px;
+					width: 10px;
+					height: 5px;
+					border-radius: 1px;
+					border-left: 4px solid #40A5D9;
+					border-bottom: 4px solid #40A5D9;
+					-webkit-transform: rotate(-45deg);
+					-moz-transform: rotate(-45deg);
+					-o-transform: rotate(-45deg);
+					-ms-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+			}
+
+			input[type="checkbox"]:not(:checked) + label:after {
+					opacity: 0;
+			}
+
+			input[type="checkbox"]:checked + label:after {
+					opacity: 1;
+			}
+		}
+	}
+
+	.has-error {
+		input {
+			border-color: red;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 800px) {
+	.sect-contact {
+		// height: 130rem;
+
+		&__main {
+			width: 90%;
+
+		}
+	}
+}
+
+@media only screen and (max-width: 414px) {
+	.sect-contact {
+		height: 180rem;
+
+		&__back {
+			height: 25rem;
+		}
+		&__main {
+			padding: 0;
+
+			&__hed {
+				h1 {
+					font-size: 3rem;
+				}
+			}
+
+			&__content {
+				margin-top: 5rem;
+			}
+			&__form {
+				padding: 0;
+				height: 67rem;
+
+				form {
+					width: 90%;
+				}
+				&__input-row {
+					height: 10rem;
+				}
+			}
+			&__row {
+				width: 90%;
+
+				&__pict-grup {
+					flex-direction: column;
+
+					.pict-grup__card {
+						width: 100%;
+						height: 100%;
+						margin-bottom: 1rem;
+
+						.card-head {
+							// border: none;
+						}
+					}
+				}
+
+				&__btn-sme {
+					flex-direction: column;
+					label {
+						width: 100%;
+						margin-bottom: 1rem;
+					}
+				}
+			}
+
+			&__line {
+				display: none;
+			}
+
+			&__bottom {
+				height: 10rem;
+				width: 90%;
+
+				&__btn {
+					width: 100%;
+				}
+
+				.checkbox-label {
+					font-size: 1.6rem;
+				}
+			}
+		}
+	}
+}

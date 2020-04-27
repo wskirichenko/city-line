@@ -1,0 +1,313 @@
+// keyframes mixin
+@mixin keyframes( $animationName ) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+// animation mixin
+@mixin animation( $keyframe, $speed ) {
+	-webkit-animation : $keyframe $speed linear infinite; /* Chrome, Safari 5 */
+	animation         : $keyframe $speed linear infinite; /* Chrome, Firefox 16+, IE 10+, Safari 5 */
+}
+
+@mixin orbit-icon-mixin (
+	$dimensions,
+	$raduis,
+	$distance,
+	$speed
+) {
+	position    : relative;
+	width       : $dimensions;
+	height      : $dimensions;
+	$clipRadius : $raduis / 2;
+	$clipX      : $dimensions / 2;
+	$clipY      : $dimensions / 2;
+
+	&::before {
+		content             : "";
+		width               : $dimensions;
+		height              : $dimensions;
+		position            : relative;
+		display             : block;
+		z-index             : 2;
+		background-repeat   : no-repeat;
+		background-position : center;
+		background-size     : contain;
+
+		clip-path           : circle($clipRadius at $clipX $clipY);
+		-webkit-clip-path   : circle($clipRadius at $clipX $clipY);
+	}
+	&::after {
+		content       : "";
+		width         : $raduis;
+		height        : $raduis;
+		position      : absolute;
+		display       : block;
+		top           : 0;
+		bottom        : 0;
+		left          : 0;
+		right         : 0;
+		margin        : auto;
+		border-radius : 100%;
+	}
+
+	&.clockwise::before {
+		@include animation(orbitClipAnimation, $speed);
+	}
+	&.clockwise::after {
+		@include animation(orbitAnimation, $speed);
+	}
+
+	&.counterclockwise::before {
+		@include animation(orbitClipAnimationСС, $speed);
+	}
+	&.counterclockwise::after {
+		@include animation(orbitAnimationCC, $speed);
+	}
+
+	// Clockwise
+	@include keyframes(orbitAnimation) {
+		from {
+			-webkit-transform : rotate(0deg) translateX($distance) rotate(0deg);
+			-moz-transform    : rotate(0deg) translateX($distance) rotate(0deg);
+			-o-transform      : rotate(0deg) translateX($distance) rotate(0deg);
+			transform         : rotate(0deg) translateX($distance) rotate(0deg);
+		}
+		to   {
+			-webkit-transform : rotate(360deg) translateX($distance) rotate(-360deg);
+			-moz-transform    : rotate(360deg) translateX($distance) rotate(-360deg);
+			-o-transform      : rotate(360deg) translateX($distance) rotate(-360deg);
+			transform         : rotate(360deg) translateX($distance) rotate(-360deg);
+		}
+	}
+	@include keyframes(orbitClipAnimation) {
+		0%   { -webkit-clip-path : circle($clipRadius at ($clipX + $distance) $clipY); }
+		25%  { -webkit-clip-path : circle($clipRadius at  $clipX  ($clipY +   $distance)); }
+		50%  { -webkit-clip-path : circle($clipRadius at ($clipX - $distance) $clipY); }
+		75%  { -webkit-clip-path : circle($clipRadius at  $clipX  ($clipY -   $distance)); }
+		100% { -webkit-clip-path : circle($clipRadius at ($clipX + $distance) $clipY); }
+	}
+	// Сounterclockwise
+	@include keyframes(orbitAnimationCC) {
+		from {
+			-webkit-transform : rotate(360deg) translateX($distance) rotate(-360deg);
+			-moz-transform    : rotate(360deg) translateX($distance) rotate(-360deg);
+			-o-transform      : rotate(360deg) translateX($distance) rotate(-360deg);
+			transform         : rotate(360deg) translateX($distance) rotate(-360deg);
+		}
+		to   {
+			-webkit-transform : rotate(0deg) translateX($distance) rotate(0deg);
+			-moz-transform    : rotate(0deg) translateX($distance) rotate(0deg);
+			-o-transform      : rotate(0deg) translateX($distance) rotate(0deg);
+			transform         : rotate(0deg) translateX($distance) rotate(0deg);
+		}
+	}
+	@include keyframes(orbitClipAnimationСС) {
+		0%   { -webkit-clip-path : circle($clipRadius at ($clipX + $distance) $clipY); }
+		25%  { -webkit-clip-path : circle($clipRadius at  $clipX  ($clipY -   $distance)); }
+		50%  { -webkit-clip-path : circle($clipRadius at ($clipX - $distance) $clipY); }
+		75%  { -webkit-clip-path : circle($clipRadius at  $clipX  ($clipY +   $distance)); }
+		100% { -webkit-clip-path : circle($clipRadius at ($clipX + $distance) $clipY); }
+	}
+}
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 800px) { @content };
+    }
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content };
+    }
+}
+
+// ---- Animate charts ------------------------------
+// @media only screen and (max-width: 414px) {
+// 	$speedAnim: 8s;
+// 	// ---- Line 1 -----
+// 	@keyframes move-chart-1 {
+// 		from, to {}
+// 		0% 	{ margin-left: -11rem; margin-top: 2rem}
+// 		5% 	{ margin-left: -11rem; margin-top: 2rem}
+// 		45% { margin-left: 0; margin-top: 15rem}
+// 		55% { margin-left: 0; margin-top: 15rem}
+// 		95% 	{ margin-left: -11rem; margin-top: 2rem}
+// 		100% 	{ margin-left: -11rem; margin-top: 2rem}
+// 	}
+// 	.chart-l1-1 { animation: move-chart-1 $speedAnim infinite linear; }
+
+// 	@keyframes move-chart-2 {
+// 		from, to {}
+// 		0% 	{ margin-top: -1rem}
+// 		5% 	{ margin-top: -1rem}
+// 		45% { margin-top: 15rem}
+// 		55% { margin-top: 15rem}
+// 		95% { margin-top: -1rem}
+// 		100% {margin-top: -1rem}
+// 	}
+// 	.chart-l1-2 { animation: move-chart-2 $speedAnim infinite linear; }
+
+// 	@keyframes move-chart-3 {
+// 		from, to {}
+// 		0% 	{ margin-left: 11rem; margin-top: 4rem}
+// 		5% 	{ margin-left: 11rem; margin-top: 4rem}
+// 		45% { margin-left: 0; margin-top: 16.5rem}
+// 		55% { margin-left: 0; margin-top: 16.5rem}
+// 		95% 	{ margin-left: 11rem; margin-top: 4rem}
+// 		100% 	{ margin-left: 11rem; margin-top: 4rem}
+// 	}
+// 	.chart-l1-3 { animation: move-chart-3 $speedAnim infinite linear; }
+
+// 	// ---- Line 2 -----
+// 	@keyframes move-chart-4 {
+// 		from, to {}
+// 		0% 	{ margin-left: -4rem; margin-top: 2rem}
+// 		5% 	{ margin-left: -4rem; margin-top: 2rem}
+// 		45% { margin-left: 0; margin-top: 5rem}
+// 		55% { margin-left: 0; margin-top: 5rem}
+// 		95% 	{ margin-left: -4rem; margin-top: 2rem}
+// 		100% 	{ margin-left: -4rem; margin-top: 2rem}
+// 	}
+// 	.chart-l2-1 { animation: move-chart-4 $speedAnim infinite linear; }
+
+// 	@keyframes move-chart-5 {
+// 		from, to {}
+// 		0% 	{ margin-left: 4rem; margin-top: 2rem}
+// 		5% 	{ margin-left: 4rem; margin-top: 2rem}
+// 		45% { margin-left: 0rem; margin-top: 5rem}
+// 		55% { margin-left: 0rem; margin-top: 5rem}
+// 		95% { margin-left: 4rem; margin-top: 2rem}
+// 		100% {margin-left: 4rem; margin-top: 2rem}
+// 	}
+// 	.chart-l2-2 { animation: move-chart-5 $speedAnim infinite linear; }
+
+// 	// ---- Line 3 -----
+// 	@keyframes move-chart-6 {
+// 		from, to {}
+// 		0% 	{ margin-left: -14rem; margin-top: -4rem}
+// 		5% 	{ margin-left: -14rem; margin-top: -4rem}
+// 		45% { margin-left: 0rem; margin-top: -5rem}
+// 		55% { margin-left: 0rem; margin-top: -5rem}
+// 		95% { margin-left: -14rem; margin-top: -4rem}
+// 		100% {margin-left: -14rem; margin-top: -4rem}
+// 	}
+// 	.chart-l3-1 { animation: move-chart-6 $speedAnim infinite linear; }
+
+// 	@keyframes move-chart-7 {
+// 		from, to {}
+// 		0% 	{ margin-left: -4rem; margin-top: 1rem}
+// 		5% 	{ margin-left: -4rem; margin-top: 1rem}
+// 		45% { margin-left: 0rem; margin-top: -5rem}
+// 		55% { margin-left: 0rem; margin-top: -5rem}
+// 		95% { margin-left: -4rem; margin-top: 1rem}
+// 		100% {margin-left: -4rem; margin-top: 1rem}
+// 	}
+// 	.chart-l3-2 { animation: move-chart-7 $speedAnim infinite linear; }
+
+// 	// ------
+// 	@keyframes move-chart-8 {
+// 		from, to {}
+// 		0% 	{ margin-left: 4rem; margin-top: 1rem}
+// 		5% 	{ margin-left: 4rem; margin-top: 1rem}
+// 		45% { margin-left: 0; margin-top: -5rem}
+// 		55% { margin-left: 0; margin-top: -5rem}
+// 		95% 	{ margin-left: 4rem; margin-top: 1rem}
+// 		100% 	{ margin-left: 4rem; margin-top: 1rem}
+// 	}
+// 	.chart-l3-3 { animation: move-chart-8 $speedAnim infinite linear; }
+
+// 	@keyframes move-chart-9 {
+// 		from, to {}
+// 		0% 	{ margin-left: 14rem; margin-top: -4rem}
+// 		5% 	{ margin-left: 14rem; margin-top: -4rem}
+// 		45% { margin-left: 0; margin-top: -5rem}
+// 		55% { margin-left: 0; margin-top: -5rem}
+// 		95% 	{ margin-left: 14rem; margin-top: -4rem}
+// 		100% 	{ margin-left: 14rem; margin-top: -4rem}
+// 	}
+// 	.chart-l3-4 { animation: move-chart-9 $speedAnim infinite linear; }
+
+// 	// ---- Line 4 -----
+// 	@keyframes move-chart-10 {
+// 		from, to {}
+// 		0% 	{ margin-left: -11rem; margin-top: 0rem}
+// 		5% 	{ margin-left: -11rem; margin-top: 0rem}
+// 		45% { margin-left: 0; margin-top: -15rem}
+// 		55% { margin-left: 0; margin-top: -15rem}
+// 		95% 	{ margin-left: -11rem; margin-top: 0rem}
+// 		100% 	{ margin-left: -11rem; margin-top: 0rem}
+// 	}
+// 	.chart-l4-1 { animation: move-chart-10 $speedAnim infinite linear; }
+
+// 	@keyframes move-chart-11 {
+// 		from, to {}
+// 		0% 	{ margin-left: 0rem; margin-top: 3rem}
+// 		5% 	{ margin-left: 0rem; margin-top: 3rem}
+// 		45% { margin-left: 0; margin-top: -15rem}
+// 		55% { margin-left: 0; margin-top: -15rem}
+// 		95% 	{ margin-left: 0rem; margin-top: 3rem}
+// 		100% 	{ margin-left: 0rem; margin-top: 3rem}
+// 	}
+// 	.chart-l4-2 { animation: move-chart-11 $speedAnim infinite linear; }
+
+// 	@keyframes move-chart-12 {
+// 		from, to {}
+// 		0% 	{ margin-left: 11rem; margin-top: 0}
+// 		5% 	{ margin-left: 11rem; margin-top: 0}
+// 		45% { margin-left: 0; margin-top: -15rem}
+// 		55% { margin-left: 0; margin-top: -15rem}
+// 		95% 	{ margin-left: 11rem; margin-top: 0}
+// 		100% 	{ margin-left: 11rem; margin-top: 0}
+// 	}
+// 	.chart-l4-3 { animation: move-chart-12 $speedAnim infinite linear; }
+
+// 	// ---- Text appear -----
+
+// 	// @keyframes appear-block {
+// 	// 	from, to {}
+// 	// 	0% 	{ opacity: 0}
+// 	// 	44% { opacity: 0}
+// 	// 	47% { opacity: 1}
+// 	// 	53% { opacity: 1}
+// 	// 	56% { opacity: 0}
+// 	// 	100% 	{ opacity: 0}
+// 	// }
+// 	// .chart--pict { animation: appear-block $speedAnim infinite linear; }
+
+// 	@keyframes appear-text {
+// 		from, to {}
+// 		0% 	{ opacity: 1}
+// 		5% { opacity: 1}
+// 		40% { opacity: 0}
+// 		60% { opacity: 0}
+// 		95% { opacity: 1}
+// 		100% 	{ opacity: 1}
+// 	}
+// 	.text-appear, .chart__picture { animation: appear-text $speedAnim infinite linear; }
+
+// }

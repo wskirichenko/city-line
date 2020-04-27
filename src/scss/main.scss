@@ -1,0 +1,20 @@
+
+@import "abstracts/mixins";
+@import "abstracts/base";
+@import "abstracts/functions";
+@import "abstracts/variables";
+
+@import "main/footer";
+@import "main/menu";
+@import "main/builder-content";
+
+// ---- Page SI -------------------
+@import "pages/home/sect-first";
+
+// ---- Page Contact -----------
+@import "pages/contact/sect-contact";
+
+
+
+
+

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5J6LSQ5V3D"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-5J6LSQ5V3D');
+	</script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#fff"/>
+
+	<title>Sound-app-landing</title>
+	<meta name="Description" content="sound-app-landing.">
+
+	<!-- Google verification -->
+	<!-- <meta name="google-site-verification" content="ii-bc89Z3F2yu43wKbo-faNTFaefkr7ff6fQ3y_mzZI"/> -->
+
+	<!-- Styles -->
+	<link type="text/css" href="dist/css/main.min.css" rel="stylesheet" media="screen">
+	<link type="text/css" href="dist/css/jquery.toast.min.min.css" rel="stylesheet" media="screen">
+
+	<!-- Fonts -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Ubuntu:300,400,700&display=swap" rel="stylesheet"> -->
+
+	<!-- Line Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
+
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+  <main>
+    <div class="builder-container">
+      <section class="navigation nav-fix">
+        <div class="navigation__logo">
+          <a class="navigation__logo__a test-color" href="#/home" aria-label="Home">
+            <!-- <img src="src/img/eet-logo.png" /> -->
+            Logo
+          </a>
+        </div>
+        <nav class="navigation__nav">
+          <ul class="navigation__list" id="scroll_meny">
+            <li class="navigation__items">
+              <a class="navigation__items__a test-color color-1" value="1" href="#/home" aria-label="Enterprise">Home</a>
+            </li>
+
+            <!-- <li class="navigation__items">
+              <a class="navigation__items__a test-color color-2" value="2" href="#/agency" aria-label="Applications">Applications</a>
+            </li>
+
+            <li class="navigation__items">
+              <a class="navigation__items__a test-color color-3" value="3" href="#/team" aria-label="team">Ready
+                teams</a>
+            </li> -->
+            <li class="navigation__items" id="contact_scroll">
+              <a class="navigation__items__a contact-a" value="2" href="#/contact" aria-label="contact">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="navigation nav-scrol" id="nav-scroll">
+        <div class="navigation__logo">
+          <a class="navigation__logo__a" href="#/home" aria-label="Enterprise" style="color: #000;">
+            <!-- <img src="src/img/eet-logo.png" /> -->
+            Logo
+          </a>
+        </div>
+        <nav class="navigation__nav">
+          <ul class="navigation__list" id="scroll_meny2">
+            <li class="navigation__items si">
+              <a class="navigation__items__a color-1" value="1" href="#/home" aria-label="Enterprise"
+                style="color: #000;">Home</a>
+            </li>
+            <!-- <li class="navigation__items si">
+              <a class="navigation__items__a color-2" value="2" href="#/agency" aria-label="Applications"
+                style="color: #000;">Applications</a>
+            </li>
+
+            <li class="navigation__items">
+              <a class="navigation__items__a color-3" value="3" href="#/team" aria-label="team"
+                style="color: #000;">Ready teams</a>
+            </li> -->
+            <li class="navigation__items">
+              <a class="navigation__items__a contact-a" href="#/contact" aria-label="contact"
+                style="color: white;">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="hamb-menu checkbox">
+        <div class="container">
+          <a class="logo__a" href="#/home" aria-label="Home">
+            <!-- <img src="src/img/eet-logo.png" /> -->
+            Logo
+          </a>
+
+          <input id="toggle" type="checkbox">
+
+          <label class="toggle-container" for="toggle">
+            <span class="button button-toggle"></span>
+          </label>
+
+          <nav class="nav">
+            <a class="nav-item" href="#/home" aria-label="team">Home</a>
+
+            <!-- <a class="nav-item" href="#/agency" aria-label="team">Applications</a>
+
+            <a class="nav-item" href="#/team" aria-label="team">Ready teams</a> -->
+
+            <a rel="nofollow" rel="noreferrer" class="nav-item" href="#/contact">Contact us</a>
+          </nav>
+        </div>
+      </section>
+
+      <div class="builder-content"></div>
+
+      <footer class="footer">
+        <div class="footer__main">
+          <div class="footer__cipyright">
+            <p class="copyright">Copyright @<span id="data_year"></span> Sound App Landing Ltd 2020. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+
+  <script src="dist/js/bundle-min.js"></script>
+
+  <!-- Intercom -->
+  <script>
+    window.intercomSettings = {
+      app_id: "gieeuiy6"
+    };
+  </script>
+  <script>
+    (function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', w.intercomSettings); } else { var d = document; var i = function () { i.c(arguments); }; i.q = []; i.c = function (args) { i.q.push(args); }; w.Intercom = i; var l = function () { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/gieeuiy6'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); }; if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })();
+  </script>
+</body>
+</html>

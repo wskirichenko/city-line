@@ -1,0 +1,203 @@
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%;
+}
+
+
+body {
+	// font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "SF Rounded", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	height: 100%;
+	margin: 0;
+	* {
+		box-sizing: border-box;
+	}
+
+	&.overflow-hidden {
+		overflow: hidden;
+	}
+
+	h1, h2, h3 {
+		margin: 0;
+	}
+	h2 {
+		font-size: 50px;
+		line-height: 59px;
+		color: #1D1D1D;
+	}
+}
+
+.builder-container {
+	position: relative;
+}
+
+.hidden {
+	display: none;
+}
+
+.active-org-class {
+	border: 2px solid #ffffff!important;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700,800,900&display=swap');
+@font-face {
+	font-family : "Barlow Extrabold";
+	src         : url("../../fonts/BarlowCondensed-ExtraBold.ttf") format("opentype");
+}
+
+@font-face {
+	font-family: "SF Rounded";
+	font-weight: 400;
+	src: url("../../fonts/SF_Pro_Rounded/SF-Pro-Rounded-Regular.otf") format("opentype");
+}
+@font-face {
+	font-family: "SF Rounded";
+	font-weight: 600;
+	src: url("../../fonts/SF_Pro_Rounded/SF-Pro-Rounded-Medium.otf") format("opentype");
+}
+@font-face {
+	font-family: "SF Rounded";
+	font-weight: 700;
+	src: url("../../fonts/SF_Pro_Rounded/SF-Pro-Rounded-Bold.otf") format("opentype");
+}
+
+a {
+	text-decoration: none;
+	color:rgb(0, 0, 0);
+	outline: none;
+}
+
+
+.same-text {
+	// white-space: pre-line;
+	line-height: normal;
+	white-space: pre-line;
+}
+
+.body-text {
+	font-family: "SF Rounded", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+	font-size: 18px!important;
+	line-height: 26px!important;
+	font-weight: 500!important;
+	color: #1D1D1D;
+}
+.h2-text {
+	font-size: 50px!important;
+	font-weight: 700!important;
+	line-height: 59px!important;
+	color: #1D1D1D;
+}
+
+.orbit-icon {
+	@include orbit-icon-mixin(
+		65px, // dimensions
+		40px,  // raduis
+		10px,  // distance
+		30s    // speed
+	);
+}
+
+.chart {
+	margin-right: 2rem;
+
+	&__picture {
+		position: absolute;
+		width: 4rem;
+		height: 4rem;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		margin-left: 2.7rem;
+		margin-top: -8rem;
+	}
+
+	&__picture--icon {
+		font-size: 4rem;
+		position: absolute;
+		margin-top: -8rem;
+		margin-left: 2.7rem;
+	}
+
+	&__header {
+		font-size: 1.2rem;
+		color: gray;
+		text-align: center;
+	}
+	.chart__picture--js {
+		background-image: url(../../img/SI/charts/gray/js.png);
+	}
+	.chart__picture--java {
+		background-image: url(../../img/SI/charts/gray/java.png);
+		margin-top: -7rem;
+	}
+	.chart__picture--python {
+		background-image: url(../../img/SI/charts/gray/python.png);
+	}
+	.chart__picture--bluetooth {
+		background-image: url(../../../img/SI/icons/bluetooth.png);
+	}
+	.chart__picture--wifi {
+		background-image: url(../../../img/SI/icons/wifi.png);
+	}
+	.chart__picture--graphql {
+		background-image: url(../../img/SI/charts/gray/graphql.png);
+	}
+	.chart__picture--datascience {
+		background-image: url(../../img/SI/charts/gray/data_science.png);
+	}
+	.chart__picture--microservices {
+		background-image: url(../../img/SI/charts/gray/microservices.png);
+	}
+	.chart__picture--c {
+		background-image: url(../../img/SI/charts/gray/c_.png);
+	}
+	.chart__picture--security {
+		background-image: url(../../img/SI/charts/gray/security.png);
+	}
+	.chart__picture--react {
+		background-image: url(../../img/SI/charts/gray/react.png);
+	}
+	.chart__picture--cucumber {
+		background-image: url(../../img/SI/charts/gray/cucumber.png);
+	}
+	.chart__picture--mlai {
+		background-image: url(../../img/SI/charts/gray/mlai.png);
+
+	}
+}
+
+.activ-first-btn {
+	color: white!important;
+	background-color: #40A5D9;
+	h3, p {
+		color: white!important;
+	}
+}
+
+.activ-second-btn {
+	color: white!important;
+	background-color: #40A5D9;
+	.card-head {
+		color: white!important;
+		border-bottom: 2px solid white!important;
+	}
+}
+
+.desctop-hidden {
+	display: none;
+}
+
+@media only screen and (max-width: 414px) {
+	.same-text {
+		letter-spacing: normal;
+	}
+	.mobile-hidden {
+		display: none!important;
+	}
+	.desctop-hidden {
+		display: flex;
+	}
+}
