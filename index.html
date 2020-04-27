@@ -1,25 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-5J6LSQ5V3D"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-
-		gtag('config', 'G-5J6LSQ5V3D');
-	</script>
-
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#fff"/>
 
-	<title>Sound-app-landing</title>
-	<meta name="Description" content="sound-app-landing.">
-
-	<!-- Google verification -->
-	<!-- <meta name="google-site-verification" content="ii-bc89Z3F2yu43wKbo-faNTFaefkr7ff6fQ3y_mzZI"/> -->
+	<title>City Line</title>
+	<meta name="Description" content="City-Line.">
 
 	<!-- Styles -->
 	<link type="text/css" href="dist/css/main.min.css" rel="stylesheet" media="screen">
@@ -31,13 +18,12 @@
 	<!-- Line Awesome -->
 	<link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css">
 
-
 	<!-- Favicon -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<!-- <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/favicon/site.webmanifest">
-	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5"> -->
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="theme-color" content="#ffffff">
 </head>
@@ -46,37 +32,69 @@
   <main>
     <div class="builder-container">
       <section class="navigation nav-fix">
-        <div class="navigation__logo">
-          <a class="navigation__logo__a test-color" href="#/home" aria-label="Home">
-            <!-- <img src="src/img/eet-logo.png" /> -->
-            Logo
-          </a>
+        <div class="nav-centr">
+          <nav class="navigation__nav">
+            <ul class="navigation__list">
+              <li class="navigation__items">
+                <a class="navigation__items__a test-color color-10" value="10" href="#/contact" aria-label="Enterprise">About us</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="navigation__logo">
+            <a class="navigation__logo__a test-color" href="#/home" aria-label="Home">
+              <!-- <img src="src/img/eet-logo.png" /> -->
+            </a>
+          </div>
+
+          <nav class="navigation__nav">
+            <ul class="navigation__list">
+              <li class="navigation__items">
+                <a class="navigation__items__a test-color color-1" value="1" href="#/home" aria-label="Enterprise">List with us </a>
+              </li>
+
+              <li class="navigation__items">
+                <a class="navigation__items__a test-color color-2" value="2" href="#/contact" aria-label="Enterprise">News </a>
+              </li>
+
+              <li class="navigation__items">
+                <a class="navigation__items__a test-color color-3" value="3" href="#/contact" aria-label="Applications">Explorer Map</a>
+              </li>
+
+              <li class="navigation__items">
+                <a class="navigation__items__a test-color color-4" value="4" href="#/contact" aria-label="team">Split Screen</a>
+              </li>
+
+              <li class="navigation__items">
+                <a class="navigation__items__a test-color color-5" value="5" href="#/contact" aria-label="team">Market Map</a>
+              </li>
+
+              <li class="navigation__items">
+                <a class="navigation__items__a test-color color-6" value="6" href="#/contact" aria-label="team">(17) Listings</a>
+              </li>
+
+              <li class="navigation__items">
+                <a class="navigation__items__a test-color color-7" value="7" href="#/contact" aria-label="team">Saved</a>
+              </li>
+
+              <li class="navigation__items">
+                <a class="navigation__items__a test-color color-8" value="8" href="#/contact" aria-label="team">More</a>
+              </li>
+
+              <li class="navigation__items">
+                <a class="navigation__items__a test-color color-9" value="9" href="#/contact" aria-label="team">Members</a>
+              </li>
+              <!-- <li class="navigation__items" id="contact_scroll">
+                <a class="navigation__items__a contact-a" value="2" href="#/contact" aria-label="contact">News</a>
+              </li> -->
+            </ul>
+          </nav>
         </div>
-        <nav class="navigation__nav">
-          <ul class="navigation__list" id="scroll_meny">
-            <li class="navigation__items">
-              <a class="navigation__items__a test-color color-1" value="1" href="#/home" aria-label="Enterprise">Home</a>
-            </li>
-
-            <!-- <li class="navigation__items">
-              <a class="navigation__items__a test-color color-2" value="2" href="#/agency" aria-label="Applications">Applications</a>
-            </li>
-
-            <li class="navigation__items">
-              <a class="navigation__items__a test-color color-3" value="3" href="#/team" aria-label="team">Ready
-                teams</a>
-            </li> -->
-            <li class="navigation__items" id="contact_scroll">
-              <a class="navigation__items__a contact-a" value="2" href="#/contact" aria-label="contact">Contact us</a>
-            </li>
-          </ul>
-        </nav>
       </section>
 
-      <section class="navigation nav-scrol" id="nav-scroll">
+      <!-- <section class="navigation nav-scrol" id="nav-scroll">
         <div class="navigation__logo">
           <a class="navigation__logo__a" href="#/home" aria-label="Enterprise" style="color: #000;">
-            <!-- <img src="src/img/eet-logo.png" /> -->
             Logo
           </a>
         </div>
@@ -86,22 +104,14 @@
               <a class="navigation__items__a color-1" value="1" href="#/home" aria-label="Enterprise"
                 style="color: #000;">Home</a>
             </li>
-            <!-- <li class="navigation__items si">
-              <a class="navigation__items__a color-2" value="2" href="#/agency" aria-label="Applications"
-                style="color: #000;">Applications</a>
-            </li>
 
-            <li class="navigation__items">
-              <a class="navigation__items__a color-3" value="3" href="#/team" aria-label="team"
-                style="color: #000;">Ready teams</a>
-            </li> -->
             <li class="navigation__items">
               <a class="navigation__items__a contact-a" href="#/contact" aria-label="contact"
                 style="color: white;">Contact us</a>
             </li>
           </ul>
         </nav>
-      </section>
+      </section> -->
 
       <section class="hamb-menu checkbox">
         <div class="container">

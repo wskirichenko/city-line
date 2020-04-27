@@ -3,26 +3,26 @@ $base-orange-color: #fd6727;;
 
 .sect-first {
   width: 100%;
-  height: 300vh;
+  height: 40vh;
   font-family: 'ubuntu',Arial,sans-serif;
-  // background-color: #6699ff;
-  background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 90px;
 
   &__main {
-    width: $mainWidth;
+    width: 1400px;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    z-index: 6;
+  // margin-top: -90px;
 
-
+    background-image: url(../../../img/home/back1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
   }
 }
 
