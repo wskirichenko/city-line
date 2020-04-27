@@ -23,9 +23,17 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+
+      h2 {
+        font-size: 40px;
+        text-align: center;
+      }
 
       h3 {
-        font-size: 25px;
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
       }
       .img {
         width: 90%;
@@ -44,9 +52,9 @@
 
       .button {
         width: 70%;
-        height: 70px;
+        height: 80px;
         background-color: rgb(47, 41, 105);
-        border-radius: 20px;
+        border-radius: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;

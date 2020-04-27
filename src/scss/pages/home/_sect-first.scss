@@ -1,6 +1,25 @@
+@import url(//db.onlinewebfonts.com/c/9690e9c51f345638ae93366b6912a384?family=Lucida+Blackletter);
 .home {
   height: 110vh;
 
+}
+/* @font-face kit by Fonts2u (https://fonts2u.com) */
+@font-face {
+  font-family:"STCaiyun";
+  src:url("STCAIYUN.TTF")
+  // format("eot"),url("STCAIYUN.woff")
+  format("woff"),url("../../../fonts/STCAIYUN.TTF")
+  format("truetype"),url("STCAIYUN.svg#STCaiyun")
+  format("svg");font-weight:normal;font-style:normal;
+}
+@font-face {font-family: "Lucida Blackletter";
+  src: url("//db.onlinewebfonts.com/t/9690e9c51f345638ae93366b6912a384.eot");
+  src: url("//db.onlinewebfonts.com/t/9690e9c51f345638ae93366b6912a384.eot?#iefix")
+  format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9690e9c51f345638ae93366b6912a384.woff2")
+  format("woff2"), url("//db.onlinewebfonts.com/t/9690e9c51f345638ae93366b6912a384.woff")
+  format("woff"), url("//db.onlinewebfonts.com/t/9690e9c51f345638ae93366b6912a384.ttf")
+  format("truetype"), url("//db.onlinewebfonts.com/t/9690e9c51f345638ae93366b6912a384.svg#Lucida Blackletter")
+  format("svg");
 }
 
 .sect-first {
@@ -35,15 +54,28 @@
       justify-content: center;
 
       h2 {
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 50px;
+        font-family: URW Chancery L, cursive;
+        font-weight: 200;
+        font-size: 40px;
         font-style: italic;
       }
       h1 {
-        font-size: 90px;
+        font-size: 130px;
+        font-family: "STCaiyun";
+        font-weight: 100;
+      }
+      .numb360 {
+        font-family: "Lucida Blackletter";
+        position: absolute;
+        font-size: 40px;
+        margin-top: 45px;
+        margin-left: 265px;
       }
       p {
-        font-size: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+        font-size: 17px;
+        margin-top: -21px;
+        margin-left: 70px;
       }
     }
   }
