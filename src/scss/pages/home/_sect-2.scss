@@ -1,0 +1,62 @@
+.sect-2 {
+  width: 100%;
+  height: 50vh;
+  font-family: 'ubuntu',Arial,sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__main {
+    width: 1400px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+
+    &__col {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h3 {
+        font-size: 25px;
+      }
+      .img {
+        width: 90%;
+        height: 60%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        margin: 20px 0;
+      }
+      .img-1 {
+        background-image: url(../../../img/home/img_1.png);
+      }
+      .img-2 {
+        background-image: url(../../../img/home/img_2.png);
+      }
+
+      .button {
+        width: 70%;
+        height: 70px;
+        background-color: rgb(47, 41, 105);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p {
+          color: white;
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}

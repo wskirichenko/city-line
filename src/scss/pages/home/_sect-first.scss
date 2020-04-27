@@ -1,9 +1,11 @@
-$base-blue-color: #F0F7FD;
-$base-orange-color: #fd6727;;
+.home {
+  height: 110vh;
+
+}
 
 .sect-first {
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   font-family: 'ubuntu',Arial,sans-serif;
   display: flex;
   flex-direction: column;
@@ -23,6 +25,27 @@ $base-orange-color: #fd6727;;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
+
+    &__text {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 50px;
+        font-style: italic;
+      }
+      h1 {
+        font-size: 90px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
   }
 }
 
