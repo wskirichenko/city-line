@@ -46,12 +46,28 @@
 		&__a {
 			width: 100%;
 			height: 100%;
-			display: block;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
 			padding-top: 1rem;
 
-			img {
-				height: 100%;
-			}
+      .text-c {
+        position: absolute;
+        font-family: URW Chancery L, cursive;
+        font-size: 110px;
+        color: rgb(7, 149, 7);
+        margin: 0;
+        margin-top: -40px;
+        margin-left: -20px;
+      }
+      .text-l {
+        position: absolute;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 50px;
+        margin: 0;
+        margin-top: 15px;
+        color: red;
+      }
 		}
 	}
 
@@ -68,10 +84,9 @@
 		align-items: center;
 		justify-content: center;
 
-		font-size: 1.6rem;
+		font-size: 20px;
 		font-weight: 300;
 		// font-family: 'Ubuntu', sans-serif;
-
 
 	}
 
@@ -79,9 +94,13 @@
 		// padding: 1rem 2rem;
     list-style: none;
     border-right: 1px solid gray;
-
+    &:last-child {
+      border-right: none;
+    }
 		&__a {
-			padding: 1rem 2rem;
+      padding: 1rem 2rem;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+      font-weight: 400;
 		}
 
 		.contact-a {
