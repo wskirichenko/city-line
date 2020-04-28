@@ -56,7 +56,7 @@
       align-items: center;
       justify-content: center;
       margin-top: -15px;
-      z-index: 7;
+      z-index: 5;
 
       h2 {
         font-family: URW Chancery L, cursive;
@@ -99,7 +99,8 @@
       display: flex;
       align-items: flex-end;
       justify-content: space-around;
-      z-index: 5;
+      z-index: 7;
+      overflow: hidden;
 
       .box {
         perspective: 400px;
@@ -109,23 +110,30 @@
         display: flex;
         justify-content: center;
         transform-style: preserve-3d;
-        // background-color: white;
+        transition: all, 0.3s linear;
+      }
+      .box:hover {
+        margin-bottom: -50px;
+      }
+      .box-3:hover {
+        margin-bottom: -80px;
       }
 
       .box-1 {
         height: 250px;
       }
+
       .box-2 {
-        height: 210px;
+        height: 200px;
       }
       .box-3 {
-        height: 150px;
+        margin-bottom: -50px;
       }
       .box-4 {
-        height: 180px;
+        margin-bottom: -20px;
       }
       .box-5 {
-        height: 120px;
+        margin-bottom: -80px;
       }
       .box-6 {
         height: 0px;
@@ -136,7 +144,7 @@
         width: 45%;
         height: 7%;
         transform:  skewX(-45deg);
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.5);
         margin-left: -8%;
         margin-top: -5%;
 
@@ -146,13 +154,13 @@
         width: 50%;
         height: 100%;
         transform: translateZ( -53px) rotateY( 0deg);
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.5);
       }
       .box__right {
         width: 50%;
         height: 100%;
         transform: translateZ(-22px) rotateY(-79deg);
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.5);
         margin-left: -17%;
 
       }
