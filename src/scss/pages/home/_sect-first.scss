@@ -93,10 +93,11 @@
 
     &__boxs {
       position: absolute;
-      width: 1400px;
-      height: calc(50vh - 100px);
-      margin-top: 30vh;
+      width: 700px;
+      height: 50vh;
+      margin-top: 15px;
       display: flex;
+      align-items: flex-end;
       justify-content: space-around;
       z-index: 5;
 
@@ -109,6 +110,25 @@
         justify-content: center;
         transform-style: preserve-3d;
         // background-color: white;
+      }
+
+      .box-1 {
+        height: 250px;
+      }
+      .box-2 {
+        height: 210px;
+      }
+      .box-3 {
+        height: 150px;
+      }
+      .box-4 {
+        height: 180px;
+      }
+      .box-5 {
+        height: 120px;
+      }
+      .box-6 {
+        height: 0px;
       }
 
       .box__top {
@@ -136,6 +156,13 @@
         margin-left: -17%;
 
       }
+    }
+
+    .boxs-conteyner-1 {
+      margin-left: -350px;
+    }
+    .boxs-conteyner-2 {
+      margin-left: 350px;
     }
   }
 }
