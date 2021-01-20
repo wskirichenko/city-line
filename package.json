@@ -32,7 +32,7 @@
     "compression": "^1.6.2",
     "del": "^3.0.0",
     "express": "^4.16.4",
-    "gsap": "^2.0.2",
+    "gsap": "^3.6.0",
     "gulp-connect-ssi": "^0.4.0",
     "gulp-file-include": "^2.0.1",
     "jq-router": "^4.3.0",
